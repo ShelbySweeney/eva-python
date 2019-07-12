@@ -22,27 +22,3 @@ fhand.close()
 
 print("Output written to eva.js")
 print("Open eva.htm in a browser to see the vizualization")
-
-
-
-
-
-# # select astronauts and total duration from totals table
-# cur.execute('SELECT astronaut, total_duration FROM totals ORDER BY total_duration DESC')
-# # open eva.js for writing
-# fhand = open('eva.js', 'w')
-# fhand.write("evabar = [")
-# first = True
-# # in eva.js insert dictionary of astronauts and total duration
-# for row in cur:
-#     # if it's not the first entry, put it on a new line
-#     if not first: fhand.write( ",\n")
-#     first = False
-#     astronaut = row[0]
-#     total_dur = row[1]
-#     fhand.write("{astronaut: '"+astronaut+"', duration: "+str(total_dur)+"}")
-# fhand.write( "\n];\n")
-# fhand.close()
-#
-# print("Output written to eva.js")
-# print("Open eva.htm in a browser to see the vizualization")
