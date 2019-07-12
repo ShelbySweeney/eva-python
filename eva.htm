@@ -1,0 +1,31 @@
+<html>
+   <head>
+      <script type="text/javascript" src="eva.js"></script>
+      <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+      </script>
+      <script type = "text/javascript">
+         google.charts.load('current', {packages: ['corechart']});
+      </script>
+   </head>
+
+   <body>
+      <div id = "container" style = "width: 1500px; height: 1000px; margin: 0 auto">
+      </div>
+      <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable( evabar );
+
+            var options = {
+                title: 'Astronauts Hours Spent in Extra-vehicular Activity',
+                subtitle: 'US and Russia: 6/3/1965-8/22/2013',
+              }
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.BarChart(document.getElementById('container'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+   </body>
+</html>
